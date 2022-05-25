@@ -69,3 +69,47 @@ header, footer {
 }
 
 
+/* 2nd section */
+#second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#second-content {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 20px;
+    align-items: center;
+}
+
+.info #p {
+    display: block;
+}
+
+.blue-rect {
+    height:100px;
+    width:100px;
+    border-radius: 5px;
+    border-color: blue;
+    background-color: blue;
+    box-sizing: border-box;
+}
+
+#third{
+    background-color: #e5e7eb;
+    display: flex;
+    align-items: center;
+}
+
+#quote {
+    margin: 20px 50px;
+
+}
