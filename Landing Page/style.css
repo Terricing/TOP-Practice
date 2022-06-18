@@ -1,71 +1,104 @@
 * {
-    padding: 0;
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
-body, header {
-    display: flex;
-    flex-direction: column;
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #f9faf8;
+    background: #1f2937;
 }
 
-/* nav bar */
+ul {
+    list-style-type: none;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
 nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-top: 1%;
+    height: 100px;
 }
 
-nav div a {
-    padding: 5px;
+/* nav links */
+nav a {
+    color: #e5e7eb;
+    font-size: 18px;
+    text-decoration: none;
 }
 
-/* nav logo */
-nav h3 {
-    color: #f9faf8;
-    font-size: 24px;
-}
-
-/* hero */
-#hero {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-#hero h1 {
-    font-size: 48px;
-    text-emphasis: bolder;
+nav a:hover {
     color: #f9faf8;
 }
 
-#hero-left {
+.logo {
     display: block;
+    font-size: 24px;
+    font-weight: bolder;
 }
 
-/* hero right */
-#hero-right {
-    height: 30vh;
-    width: 60vh;
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+header {
+    color: #e5e7eb;
+    line-height: 1.2;
+    height: 500px;
+}
+
+header h1 {
+    font-size: 48px;
+    color: #f9faf8;
+    font-weight: bolder;
+}
+
+#placeholder {
+    width: 700px;
+    height: 300px;
     background-color: gray;
     display: flex;
-    justify-content: center;
-    justify-items: center;
-}
-
-#hero {
     justify-content: center;
     align-items: center;
 }
 
-/* nav element + secondary hero text */
-nav div a, #hero-left p, #hero-right p {
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
     font-size: 18px;
-    color: #e5e7eb;
 }
 
-header, footer {
-    background-color: #1f2937;
+header .container > div:first-child {
+    max-width: 500px;
 }
 
+#boxes .container{
+    display: flex;
+    flex-direction: column;
+}
 
+#boxes .container div{
+    display: flex;
+}
+
+#boxes .container div div{
+    display: flex;
+    flex-direction: column;
+}
