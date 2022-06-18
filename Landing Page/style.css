@@ -97,8 +97,3 @@ header .container > div:first-child {
 #boxes .container div{
     display: flex;
 }
-
-#boxes .container div div{
-    display: flex;
-    flex-direction: column;
-}
