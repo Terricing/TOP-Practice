@@ -104,10 +104,12 @@ header .container > div:first-child {
 
 #boxes .container div{
     display: flex;
+    justify-content: space-around;
     margin-top: 10px;
 }
 
 .info-item {
+    flex: 0;
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -116,11 +118,62 @@ header .container > div:first-child {
 }
 
 .box {
-    width: 100%;
-    height: 100px;
+    width: 150px;
+    height: 175px;
     border: 4px solid #3882f6;
+    border-radius: 10px;
     /* border-radius: 2px;
     border-color: #3882f6; */
     /* border-color: black; */
+}
 
+#second {
+    height: 100px;
+    background-color: #e5e7eb;
+    color: #1f2937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#third {
+    height: 300px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#third .container {
+    width: 60%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3882f6;
+}
+
+.call-to-action {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background-color: #3882f6;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-size: 18px;
+    color: white;
 }
