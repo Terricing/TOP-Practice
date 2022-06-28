@@ -1,7 +1,6 @@
 function computerPlay()
 {
     let randPlay = Math.floor(Math.random() * 3) + 1
-    console.log(randPlay);
     switch (randPlay)
     {
         case 1:
@@ -32,4 +31,28 @@ function playRound(playerSelection, computerSelection)
     }
 }
 
-console.log(playRound('paper', computerPlay()));
+function game()
+{
+    let playerScore = 0;
+    let computerScore = 0;
+    for (let i = 0; i < 5; i++)
+    {
+        const playerSelection = prompt();
+        const computerSelection = computerPlay();
+
+        const result = playRound(playerSelection, computerSelection);
+        if (result.includes('You win!')) 
+        {
+            playerScore++;
+        }
+        else if (result.includes('You lose!'))
+        {
+            computerScore++;
+        }
+
+        console.log(result);
+    }
+    console.log(playerScore + ", " + computerScore); 
+}
+
+game();
