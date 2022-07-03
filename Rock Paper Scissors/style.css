@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #5B618A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 800px;
+    background-color: #9EADC8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 800px;
+    align-items: center;
+}
+
+#results {
+    height: 200px;
+    width: 300px;
+    background-color: #5B507A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
