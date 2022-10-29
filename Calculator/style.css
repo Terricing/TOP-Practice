@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+#display {
+    height: 20px;
+    border: 1px solid black;
+}
+
+.rowNum {
+    display: flex;
+}
+
+.inputBtn {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+}
