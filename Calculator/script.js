@@ -8,6 +8,7 @@ let subtract = document.getElementById("subtract");
 let operate = document.getElementById("operate");
 
 let canOperate = false;
+let operationAdded = false;
 
 Array.from(nums).forEach(num => {
     num.addEventListener('click', (event) => {display.textContent += num.textContent; canOperate = true;});
@@ -16,10 +17,11 @@ Array.from(nums).forEach(num => {
 function AddOperation(operation, symbol)
 {
     operation.addEventListener('click', (event) => {
-        if (canOperate)
+        if (canOperate && !operationAdded)
         {
             display.textContent += " " + symbol + " ";
             canOperate = false;
+            operationAdded = true;
         }
     });
 }
@@ -29,28 +31,28 @@ AddOperation(divide, '/')
 AddOperation(add, '+')
 AddOperation(subtract, '-')
 
-clear.addEventListener('click', (event) => {display.textContent = ""});
+clear.addEventListener('click', (event) => {display.textContent = ""; operationAdded = false; canOperate = false});
 operate.addEventListener('click', (event) => {
     let operations = display.textContent.split(" ");
-    console.log(operations);
     result = parseFloat(operations[0]);
-    for (let i = 1; i < operations.length-2; i += 2){
-        console.log(operations[i])
-        switch (operations[i]) {
-            case "*":
-                result *= parseFloat(operations[i+1]);
-                break;
-            case "/":
-                result /= parseFloat(operations[i+1]);
-                break;
-            case "+":
-                result += parseFloat(operations[i+1]);
-                break;
-            case "-":
-                result -= parseFloat(operations[i+1]);
-                break; 
-        }
+
+    switch (operations[1]){
+        case '*':
+            result *= parseFloat(operations[2]);
+            break;
+        case '+':
+            result += parseFloat(operations[2]);
+            break;
+        case '-':
+            result -= parseFloat(operations[2]);
+            break;
+        case '/':
+            result /= parseFloat(operations[2]);
+            break;   
     }
+    
     display.textContent = result.toString();
+    canOperate = true;
+    operationAdded = false;
 })
 
